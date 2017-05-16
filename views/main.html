@@ -1,0 +1,73 @@
+<div class="searchbar">
+  <div class="wrapper">
+    <form name="search" ng-submit="formSearch()" novalidate>
+        <input type="text" class="search" name="string" placeholder="Search for artist or album title" ng-model="spotify.string" ng-required="true">
+        <p ng-show="search.string.$invalid && search.string.$touched">Must be a valid string</p>
+      <button type="submit" class="search-btn" ng-disabled="search.$invalid">Search</button>
+    </form>
+  </div>
+</div>
+
+<!-- if no records found or no search -->
+<div ng-if="!results" class="empty">
+  <img ng-src="images/Magnify@2x.png" class="img-fluid mx-auto d-block magnify">
+  <p>Your results will appear here</p>
+</div>
+
+<!-- results section -->
+<div ng-if="results" class="results">
+  <div ng-repeat="(type, output) in results">
+      <div ng-repeat="item in output.items | limitTo: limit" class="item">
+        <div data-toggle="modal" data-target="#showAlbumsModal-{{item.id}}" ng-click="findAlbums(item.id)">
+          <!-- Button trigger modal -->
+          <div ng-show="item.images[0].url" class="image-div">
+            <img ng-src="{{ item.images[0].url }}" class="image">
+            <span ng-if="type == 'artists'">
+              <img ng-src="images/artist-icon@2x.png" class="small-icon">
+            </span>
+            <span ng-if="type == 'albums'">
+              <img ng-src="images/album-icon@2x.png" class="small-icon">
+            </span>
+          </div>
+          <div ng-if="!item.images[0].url">
+            <img ng-src="images/noimg.jpg" class="image">
+          </div>
+          <div class="overlay">
+            <img ng-src="images/Bitmap@2x.png">
+            <span ng-if="type == 'artists'">
+              <div class="text ng-binding">View Ablums</div>
+            </span>
+            <span ng-if="type == 'albums'">
+              <div class="text ng-binding">View Tracks</div>
+            </span>
+          </div>
+          <p>{{ item.name }}</p>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="showAlbumsModal-{{item.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">{{ item.name }}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div ng-repeat="album in albums.items">
+                    <span>{{ album.name }}</span><br>
+                    <!-- <span>{{ albums }}</span> -->
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+  </div>
+  <!-- more button -->
+        <div ng-show="!noMore" class="more">
+          <a ng-click="more(results)" class="more-btn">Show me more</a>
+        </div>
+</div>
