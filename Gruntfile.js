@@ -418,9 +418,19 @@ module.exports = function (grunt) {
         configFile: 'test/karma.conf.js',
         singleRun: true
       }
+    },
+
+    // github pages
+    'gh-pages': {
+      options: {
+        base: 'app'
+      },
+      src: ['**']
     }
   });
 
+  // register task github pages
+  grunt.registerTask('dev', ['gh-pages']);
 
   grunt.registerTask('serve', 'Compile then start a connect web server', function (target) {
     if (target === 'dist') {
