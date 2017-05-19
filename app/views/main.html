@@ -1,8 +1,8 @@
 <div class="searchbar">
   <div class="wrapper">
     <form name="search" ng-submit="formSearch()" novalidate>
-        <input type="text" class="search" name="string" placeholder="Search for artist or album title" ng-model="spotify.string" ng-required="true">
         <p ng-show="search.string.$invalid && search.string.$touched">Must be a valid string</p>
+        <input type="text" class="search" name="string" placeholder="Search for artist or album title" ng-model="spotify.string" ng-required="true">
       <button type="submit" class="search-btn" ng-disabled="search.$invalid">Search</button>
     </form>
   </div>
@@ -16,9 +16,9 @@
 
 <!-- results section -->
 <div ng-if="results" class="results">
-  <div ng-repeat="(type, output) in results">
+  <div ng-repeat="(type, output) in results" class="section">
       <div ng-repeat="item in output.items | limitTo: limit" class="item">
-        <div data-toggle="modal" data-target="#showAlbumsModal-{{item.id}}" ng-click="findAlbums(item.id)">
+        <div data-toggle="modal" data-target="#showAlbumsModal-{{item.id}}" ng-click="findMore(type, item.id)" class="box">
           <!-- Button trigger modal -->
           <div ng-show="item.images[0].url" class="image-div">
             <img ng-src="{{ item.images[0].url }}" class="image">
@@ -29,7 +29,7 @@
               <img ng-src="images/album-icon@2x.png" class="small-icon">
             </span>
           </div>
-          <div ng-if="!item.images[0].url">
+          <div ng-if="!item.images[0].url" class="image-div">
             <img ng-src="images/noimg.jpg" class="image">
           </div>
           <div class="overlay">
@@ -45,20 +45,35 @@
         </div>
 
         <!-- Modal -->
-        <div class="modal fade" id="showAlbumsModal-{{item.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-          <div class="modal-dialog" role="document">
+        <div class="modal fade" id="showAlbumsModal-{{item.id}}" tabindex="-1" role="dialog" aria-labelledby="artistModalTitle" aria-hidden="true">
+          <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">{{ item.name }}</h5>
+                <h5 class="modal-title" id="artistModalTitle">{{ item.name }}</h5>
+                <img ng-show="item.images[0].url" ng-src="{{ item.images[0].url }}" class="cover">
+                <img ng-if="!item.images[0].url" ng-src="images/noimg.jpg" class="cover">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
+              <span ng-if="type == 'artists'">
+                <div class="modal-header albums-text">Albums<span class="by">&nbsp;by</span></div>
+              </span>
+              <span ng-if="type == 'albums'">
+                <div class="modal-header albums-text">Tracks<span class="by">&nbsp;by</span></div>
+              </span>
               <div class="modal-body">
-                <div ng-repeat="album in albums.items">
-                    <span>{{ album.name }}</span><br>
-                    <!-- <span>{{ albums }}</span> -->
+                <div ng-repeat="cpitem in albums.items" class="album-modal">
+                  <div ng-if="type == 'artists'" ng-init="getAlbumDetails(artist, cpitem.id)">
+                    <img ng-src="{{ cpitem.images[2].url }}" class="album-cover">
+                    <span class="album-name">{{ cpitem.name }}</span><br>
+                    <span>{{ details.release_date | date:'yyyy' }}</span>
                   </div>
+                  <div ng-if="type == 'albums'">
+                    <span class="album-name">{{ cpitem.name }}</span><br>
+                    <span>{{ cpitem.duration_ms | date:'mm:ss'}}</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
