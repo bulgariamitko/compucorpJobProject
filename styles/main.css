@@ -41,6 +41,7 @@ header > p > span {
 .logo {
 	padding-top: 7%;
 	height: 80%;
+	width: 30%;
 }
 
 .gllogo {
@@ -49,8 +50,8 @@ header > p > span {
 }
 
 .arrow {
-	padding-top: 1%;
-	max-height: 80px;
+	width: 3%;
+    margin-left: 47%;
 }
 
 .searchbar {
