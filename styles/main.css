@@ -1,74 +1,14 @@
 @font-face {
-    font-family: "Raleway-Black";
-    src: url(../fonts/Raleway-Black.ttf);
-}
-@font-face {
-    font-family: "Raleway-BlackItalic";
-    src: url(../fonts/Raleway-BlackItalic.ttf);
-}
-@font-face {
     font-family: "Raleway-Bold";
     src: url(../fonts/Raleway-Bold.ttf);
-}
-@font-face {
-    font-family: "Raleway-BoldItalic";
-    src: url(../fonts/Raleway-BoldItalic.ttf);
-}
-@font-face {
-    font-family: "Raleway-ExtraBold";
-    src: url(../fonts/Raleway-ExtraBold.ttf);
-}
-@font-face {
-    font-family: "Raleway-ExtraBoldItalic";
-    src: url(../fonts/Raleway-ExtraBoldItalic.ttf);
 }
 @font-face {
     font-family: "Raleway-ExtraLight";
     src: url(../fonts/Raleway-ExtraLight.ttf);
 }
 @font-face {
-    font-family: "Raleway-ExtraLightItalic";
-    src: url(../fonts/Raleway-ExtraLightItalic.ttf);
-}
-@font-face {
-    font-family: "Raleway-Italic";
-    src: url(../fonts/Raleway-Italic.ttf);
-}
-@font-face {
-    font-family: "Raleway-Light";
-    src: url(../fonts/Raleway-Light.ttf);
-}
-@font-face {
-    font-family: "Raleway-LightItalic";
-    src: url(../fonts/Raleway-LightItalic.ttf);
-}
-@font-face {
-    font-family: "Raleway-Medium";
-    src: url(../fonts/Raleway-Medium.ttf);
-}
-@font-face {
-    font-family: "Raleway-MediumItalic";
-    src: url(../fonts/Raleway-MediumItalic.ttf);
-}
-@font-face {
     font-family: "Raleway-Regular";
     src: url(../fonts/Raleway-Regular.ttf);
-}
-@font-face {
-    font-family: "Raleway-SemiBold";
-    src: url(../fonts/Raleway-SemiBold.ttf);
-}
-@font-face {
-    font-family: "Raleway-SemiBoldItalic";
-    src: url(../fonts/Raleway-SemiBoldItalic.ttf);
-}
-@font-face {
-    font-family: "Raleway-Thin";
-    src: url(../fonts/Raleway-Thin.ttf);
-}
-@font-face {
-    font-family: "Raleway-ThinItalic";
-    src: url(../fonts/Raleway-ThinItalic.ttf);
 }
 
 body {
@@ -271,10 +211,9 @@ form > p {
 	    transition: 0.3s;
 	    border-radius: 2px;
 	    background-color: #fff;
-	    height: 80px;
 	    display: flex;
 	    flex-direction: row;
-	    margin: 12px;
+	    margin: 12px 0px;
 	}
 
 	.image {
@@ -297,11 +236,6 @@ form > p {
 	    width: 20px !important;
 	    max-height: 20px !important;
 	    background: transparent;
-	}
-
-	.item {
-		margin-left: 0px;
-		margin-right: 0px;
 	}
 
 	.box p {
@@ -339,6 +273,14 @@ form > p {
 	.album-cover {
 		max-width: 68px;
 	}
+}
+
+.item {
+	cursor: pointer;
+}
+
+.modal {
+	cursor: initial;
 }
 
 .close {
