@@ -72,6 +72,12 @@
                   <div ng-if="type == 'albums'">
                     <span class="album-name">{{ cpitem.name }}</span><br>
                     <span>{{ cpitem.duration_ms | date:'mm:ss'}}</span>
+                    Preview: 
+                    <audio controls>
+                      <source ng-src="{{cpitem.preview_url}}">
+                      Your browser does not support the audio element.
+                    </audio>
+                    
                   </div>
                 </div>
               </div>
