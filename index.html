@@ -19,12 +19,12 @@
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
+    
     <header>
       <img ng-src="images/gl-logo@2x.png" class="float-left gllogo">
       <p class="float-right">Powered by <span>Spotify</span></p>
-      <img ng-src="images/hero-img@2x.png" class="mx-auto d-block logo">
-      <img ng-src="images/Page1@2x.png" class="mx-auto d-block arrow">
+      <img ng-src="images/hero-img@2x.png" class="d-block logo">
+      <img ng-src="images/Page1@2x.png" class="d-block arrow">
     </header>
 
     <div>
@@ -38,6 +38,10 @@
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-modal-service/dst/angular-modal-service.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js" integrity="sha256-+f0njwC9E3IT9zDPry5DSIcGdSxQYezBaStQ4L0ZRfU=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.js" integrity="sha256-lw0u1cTM3AYG0sY5cKefhETFxDjo/T5GTAppqOwgGPY=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-animate.js" integrity="sha256-BBgufnyROWe7BGMx7tGTfMyfPh/SKbEiz/3M51IDID4=" crossorigin="anonymous"></script>
@@ -47,6 +51,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-resource.js" integrity="sha256-Y7DoPHMa8rl/rBFiTRv6aI+8AwU5ZeoDzKijnFUoHso=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-sanitize.js" integrity="sha256-agPCzu+RUM7NnIZ80Pbuy6F7oGzZHUpcXlwCLtB+Qvo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-touch.js" integrity="sha256-BFWWJVlWu85zBuVPUoLS2zs5zSe2Sz+6fG7uQPUuIY8=" crossorigin="anonymous"></script>
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <!-- endbuild -->
+</body>
+</html>
+
     <!-- <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-aria/angular-aria.js"></script>
     <script src="bower_components/angular-cookies/angular-cookies.js"></script>
