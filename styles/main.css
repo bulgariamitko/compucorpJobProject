@@ -33,8 +33,7 @@ header > p > span {
 }
 
 .logo {
-	padding-top: 7%;
-	width: 48%;
+    width: 48%;
     display: block;
     margin-left: 25%;
 }
