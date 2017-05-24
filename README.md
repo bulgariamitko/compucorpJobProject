@@ -24,7 +24,7 @@ Music have been always my passion. I always wanted when i was little to be able 
 - Bower
 - NPM
 
-## What i did extra
+## Not sure if you find your song? Play it!
 I added a functionality when someone click on an album of an artists and list all the songs with there duration to be able to play 30 seconds from the song. Any song. I think this is a nice addition to the project.
 
 ## Conclusion
