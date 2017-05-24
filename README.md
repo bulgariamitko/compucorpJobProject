@@ -8,7 +8,7 @@ Angular v1.6 app for search artists and albums powered by the Spotify API.
 
 ## Summery
 
-Music have been always my passion. I always wanted when i was little to be able to find with ease my favourite artists and there discographies. So, i was very exaited when Compucorp have me the opportunity to show my skills and build this site/app for them.
+Music have been always my passion. I always wanted when i was little to be able to find with ease my favourite artists and there discographies. So, i was very exited when Compucorp have me the opportunity to show my skills and build this site/app for them.
 
 ## How i created the app
 - sudo yo angular
@@ -23,3 +23,9 @@ Music have been always my passion. I always wanted when i was little to be able 
 - Gulp
 - Bower
 - NPM
+
+## What i did extra
+I added a functionality when someone click on an album of an artists and list all the songs with there duration to be able to play 30 seconds from the song. Any song. I think this is a nice addition to the project.
+
+## Conclusion
+Keep in mind that the code is not perfect and that it could be written better. There is always something you can do/write better. I'm happy with my final project i hope you will like it too. 
