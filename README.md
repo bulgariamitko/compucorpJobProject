@@ -30,7 +30,7 @@ I added a functionality when someone click on an album of an artists and list al
 ## Conclusion
 Keep in mind that the code is not perfect and that it could be written better. There is always something you can do/write better. I'm happy with my final project i hope you will like it too. 
 
-# Requirements
+### Requirements
 - Your solution must follow the design as closely as possible
 - Write tests for you code
 - Include a build process
@@ -40,7 +40,7 @@ Keep in mind that the code is not perfect and that it could be written better. T
 - The site must work fine with the latest version of Chrome, Firefox, Safari, Microsoft Edge and IE11
 - Include a README file in which you explain your solution
 
-# Additional instructions
+### Additional instructions
 - Use of design patterns would be a plus
 - Use of JS modules would be a plus
 - Use of caching and local storage would be a plus
