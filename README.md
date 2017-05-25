@@ -27,6 +27,9 @@ Music has always been my passion. When I was little I always wanted to find with
 ## Not sure if you find your song? Play it!
 I added a functionality when someone click on an album of an artists and list all the songs with there duration to be able to play 30 seconds from the song. Any song. I think this is a nice addition to the project.
 
+## Bootstrap modal
+I have used bootstrap modal which is forbidden in the documentary to use, but i have used only the bootstrap modal which if i had more time i will write my own modal, but keep in mind the complex code that it is required in order to do the responsable and scrollable modal. Once again im confident that if i had more time i will write my own modal.
+
 ## Conclusion
 Keep in mind that the code is not perfect and that it could be written better. There is always something you can do/write better. I'm happy with my final project i hope you will like it too. 
 
