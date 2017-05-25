@@ -1,0 +1,399 @@
+body {
+	font-family: "Raleway-Regular", Arial, sans-serif !important;
+}
+
+header {
+	background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#CE4283, #B2455D); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#CE4283, #B2455D); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#CE4283, #B2455D); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#CE4283, #B2455D); /* Standard syntax */
+
+	height: 100vh;
+    position: relative;
+
+    color: white;
+}
+
+header > p {
+	padding-top: 2%;
+	padding-right: 1%;
+	font-size: 1em;
+}
+
+header > p > span {
+	font-family: "Raleway-Bold", sans-serif;
+}
+
+.logo {
+	padding-top: 7%;
+	height: 80%;
+}
+
+.gllogo {
+	padding: 1%;
+	height: 18%;
+}
+
+.arrow {
+	padding-top: 1%;
+	max-height: 80px;
+}
+
+.searchbar {
+	background-color: #333441;
+    padding: 1.1%;
+}
+
+.wrapper {
+	background-color: white;
+    line-height: 2;
+    width: 60%;
+    padding: 0.4%;
+    margin-left: 26%;
+    border-radius: 25px;
+    box-shadow: inset 0px 0px 3px black;
+}
+
+.wrapper form {
+	padding-left: 5%;
+}
+
+form > p {
+	color: red;
+}
+
+.search {
+	border: none;
+    width: 70%;
+    outline: none;
+    padding-left: 2%;
+}
+
+.search-btn {
+	float: right;
+    background: #c64278;
+    color: white;
+    border-radius: 50px;
+    line-height: 2;
+    border: none;
+    text-transform: uppercase;
+    outline: none;
+    cursor: pointer;
+    font-size: small;
+    padding: 4px 20px;
+}
+
+.empty {
+	background-color: #383A49;
+	padding: 5%;
+}
+
+.magnify {
+	width: 12%;
+}
+
+.empty > p {
+	text-align: center;
+    font-size: 1.5em;
+    font-family: "Raleway-ExtraLight", sans-serif;
+    color: #474958;
+}
+
+.results {
+	padding-top: 3%;
+	background-color: #383A49;
+	width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+/*big screens*/
+@media only screen and (min-width : 768px) {
+	.item {
+		width: 20%;
+		display: inline-block;
+	    margin: 0% 0% 4% 2%;
+	    background-color: white;
+	    border-radius: 2px;
+	    overflow: hidden;
+	    position: relative;
+	}
+
+	.item img {
+		width: 100%;
+	}
+
+	.image-div {
+		height: 250px;
+	}
+
+	.image {
+		display: block;
+	}
+
+	.item:hover > div > div > .image {
+		filter: blur(5px);
+	}
+
+	.item:hover .overlay {
+		opacity: 1;
+	}
+
+	.item:hover .small-icon {
+		opacity: 0;
+	}
+
+	.small-icon {
+		position: absolute;
+	    left: 10px;
+	    top: 200px;
+	    width: 30px !important;
+	    max-height: 30px !important;
+	}
+
+	.cover {
+		position: inherit;
+		max-height: 300px;
+	}
+
+	.albums-text {
+		margin: 2%;
+	    font-size: large;
+	    font-family: "Raleway-Bold", sans-serif;
+	}
+
+	.modal-title {
+		color: white;
+	    padding-top: 30%;
+	    padding-left: 3%;
+	    font-size: xx-large;
+	}
+
+	.by {
+		display: none;
+	}
+
+	.close {
+	    color: white !important;
+	    text-shadow: 2px 2px 3px black !important;
+	}
+
+	.album-cover {
+		max-width: 100px;
+	}
+}
+
+/*small screens*/
+@media (max-width: 768px) {
+	.item {
+		width: 100%;
+		height: 80px;
+		flex-basis: 45%;
+
+		position: relative;
+	    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	    transition: 0.3s;
+	    border-radius: 2px;
+	    background-color: #fff;
+	    height: 80px;
+	    display: flex;
+	    flex-direction: row;
+	    margin: 12px;
+	}
+
+	.image {
+		width: 15% !important;
+	}
+
+	.image-div {
+		height: 100%;
+		text-align: initial;
+	}
+
+	.overlay {
+		display: none;
+	}
+
+	.small-icon {
+		position: absolute;
+	    left: 5px;
+	    top: 55px;
+	    width: 20px !important;
+	    max-height: 20px !important;
+	    background: transparent;
+	}
+
+	.item {
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+
+	.box p {
+	    position: absolute;
+	    left: 120px;
+	    top: 8px;
+	    margin: inherit !important;
+	}
+
+	.cover {
+		max-height: 100px;
+		max-width: 100px;
+		margin: 13px;
+	}
+
+	.modal-title {
+		color: black;
+		padding-top: initial;
+		font-size: initial;
+		left: 130px;
+	    top: 35px;
+	}
+
+	.albums-text {
+		position: absolute;
+	    left: 130px;
+	    top: 10px;
+	    border-bottom: initial !important;
+	}
+
+	.by {
+		display: initial;
+	}
+
+	.album-cover {
+		max-width: 68px;
+	}
+}
+
+.close {
+	position: absolute;
+    top: 1%;
+    right: 4%;
+}
+
+.section {
+	width: 90%;
+}
+
+.box {
+	height: 100%;
+}
+
+.item p {
+	font-size: 1em;
+    color: #565656;
+    font-family: "Raleway-Bold", sans-serif;
+    margin: 5%;
+    white-space: nowrap;
+	overflow: hidden;
+}
+
+.overlay {
+	transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    top: 36.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.overlay img {
+	width: 50%;
+    height: 50%;
+    margin-top: 20%;
+}
+
+.text {
+	color: white;
+    text-align: center;
+    font-size: 16px;
+    font-family: "Raleway-Regular", sans-serif;
+    padding: 16px 32px;
+}
+
+.image {
+	height: inherit;
+    border-radius: 1px 1px 0px 0px;
+    opacity: 1;
+    transition: .5s ease;
+}
+
+.modal-header {
+	padding: 0px !important;
+}
+
+.modal-title {
+	position: absolute;
+    font-family: "Raleway-Bold", sans-serif;
+}
+
+.album-modal {
+	display: flex;
+	width: 100%
+}
+
+.album-modal > div {
+	text-align: initial;
+	width: 100%;
+}
+
+.album-modal img {
+	margin-right: 2%;
+}
+
+.album-modal span {
+	width: 100%;
+}
+
+.more {
+	width:100%;
+	align-items: center;
+	padding-bottom: 15px;
+	text-align: center;
+}
+
+.album-cover {
+	width: inherit !important;
+	float: left;
+	padding-bottom: 3%;
+}
+
+.album-name {
+	font-family: "Raleway-Bold", sans-serif;
+}
+
+.more-btn {
+	padding: 10px 30px;
+    border-radius: 30px;
+    font-family: "Raleway-Regular", sans-serif;
+    font-size: 10pt;
+    color: #fff;
+    border-radius: 4px;
+    text-transform: uppercase;
+    background-color: #c34374;
+    font-weight: 800;
+    text-align: center;
+    color: white !important;
+    cursor: pointer;
+}
+
+footer {
+	padding: 1%;
+    background-color: #333441;
+    color: #bdbdbd;
+    text-align: center;
+    font-family: "Raleway-Bold", sans-serif;
+}
+
+footer a {
+	color: white;
+}
+
+footer a:hover {
+	color: white;
+}
